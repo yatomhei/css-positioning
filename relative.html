@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Relative positioned</title>
+    <style media="screen">
+      h3{
+        margin: 0;
+        padding: 0;
+      }
+      div{
+        width: 450px;
+        height: 250px;
+        color: white;
+        padding: 0 5px;
+      }
+      #div1{
+        background-color: red;
+      }
+      #div2{
+        background-color: green;
+        position: relative;
+        top: 20px;
+        left: 100px;
+      }
+      #div3{
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2">
+      <strong>Top:</strong> 20px<br><strong>Left:</strong> 100px<br><br>
+      <h3>Relative positioned</h3>
+      <p>Once a box has been laid out according to the normal flow or floated, it may be shifted <u>relative to this position</u>.
+        This preserves the original position of the element, and other elements are not allowed to move into this space.</p>
+      <p>When we position the element using the box offset properties, the element overlaps the element below it rather than moving that element down as the margin or padding properties would.</p>
+    </div>
+    <div id="div3"></div>
+  </body>
+</html>

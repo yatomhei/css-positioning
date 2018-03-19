@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Inline-Block</title>
+    <style media="screen">
+      *{
+        box-sizing: border-box;
+      }
+      .box{
+        width: 30%;
+        height: 250px;
+        margin: 0 1.5%;
+        display: inline-block;
+      }
+      #div1{
+        background-color: red;
+      }
+      #div2{
+        background-color: green;
+      }
+      #div3{
+        background-color: blue;
+      }
+      #div4{
+        background-color: yellow;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Because inline-block elements are displayed on the same line as one another,
+        they include a single space between them. We can use HTML comments to “comments out”
+        any potential spaces between the div elements (sometimes when the size of each single space
+        is added to the width and horizontal margin values of all the elements in the row,
+        the total width becomes too great, pushing the last <div> element to a new row) -->
+    <div id="div1" class="box"></div><!--
+    --><div id="div2" class="box"></div><!--
+    --><div id="div3" class="box"></div>
+    <div id="div4"></div>
+  </body>
+</html>

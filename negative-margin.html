@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Positioning with negative margins</title>
+    <style media="screen">
+      /*
+
+      https://www.smashingmagazine.com/2009/07/the-definitive-guide-to-using-negative-margins/
+
+      NEGATIVE MARGINS ON *STATIC* ELEMENTS:
+
+      -> When a static element is given a negative margin on the top/left,
+        it pulls the element in that specified direction.
+
+      -> But if you apply it to the bottom/right, it doesn’t move the element down/right as you might think.
+        Instead, it pulls any succeeding element into the main element,
+        overlapping it.
+
+      -> If no width is applied, adding Negative Margins to its left/right
+         pulls the element in both directions increasing its width.
+         It’s here that the margin acts like a padding.
+
+     */
+
+      h3{
+        margin: 0;
+        padding: 0;
+      }
+      div{
+        width: 450px;
+        height: 250px;
+        color: white;
+        padding: 0 5px;
+      }
+      #div1{
+        background-color: red;
+      }
+      #div2{
+        background-color: green;
+        margin-top: -50px;
+      }
+      #div3{
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2">
+      <strong>margin-top:</strong> -50px<strong><br><br>
+      <h3>Positioning with negative top margin</h3>
+      <p>Negative margins are not a hack.</p>
+      <p>It goes with the flow. It does not break the flow of the page if applied to elements without floats. So if you use a negative margin to nudge an element upwards, all succeeding elements will be nudged as well.</p>
+    </div>
+    <div id="div3"></div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Containing Floats</title>
+    <style media="screen">
+      /* 
+        The float CSS property specifies that an element should be placed along the left or right side of its container, 
+        allowing text and inline elements to wrap around it. The element is REMOVED FROM THE NORMAL FLOW of the web page, 
+        though STILL REMAINING PART OF THE FLOW (in contrast to absolute positioning).
+
+        NOTE: An element that is floated is automatically display: block;
+      */
+      *{
+        box-sizing: border-box;
+      }
+      .box{
+        width: 30%;
+        height: 250px;
+        margin: 0 1.5%; /* Vertical margins of the floated elements do not collapse  */
+        float: left;
+      }
+      /* the container element that contains the floated divs */
+      .container{
+        background-color: pink;
+        border: 3px solid pink;
+      }
+      /* If we remove the clearfix on the container, the container element will collapse and
+         the yellow div will move up under the floated divs */
+      .clearfix:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      #div1{
+        background-color: red;
+      }
+      #div2{
+        background-color: green;
+      }
+      #div3{
+        background-color: blue;
+      }
+      #div4{
+        background-color: yellow;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container clearfix">
+      <div id="div1" class="box"></div>
+      <div id="div2" class="box"></div>
+      <div id="div3" class="box"></div>
+    </div>
+    <div id="div4"></div>
+  </body>
+</html>

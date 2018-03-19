@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Absolute Positioned</title>
+    <style media="screen">
+      /*
+        With relatively positioned elements, the box offset properties identify
+        in which direction an element would be moved in relation to itself.
+
+        With absolutely positioned elements, the box offset properties identify
+        in which direction an element will be moved in relation to its
+        closest relatively positioned parent element.
+      */
+      h3{
+        margin: 0;
+        padding: 0;
+      }
+      div{
+        width: 450px;
+        height: 300px;
+        color: white;
+        padding: 5px;
+      }
+      #div1{
+        background-color: red;
+      }
+      #div2{
+        background-color: green;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+      }
+      #div3{
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2">
+      <strong>Top:</strong> 20px<br><strong>Left:</strong> 100px<br><br>
+      <h3>Absolute Positioned</h3>
+      <p>In the absolute positioning model, a box is explicitly offset with respect to <u>its containing block</u>. It does not sit within the normal flow of the page and will overlap any surrounding elements. Additionally, the original position of the div is not preserved, and other elements are able to occupy that space.</p>
+      <p>Also, though absolutely positioned boxes have margins, they <u>do not</u> collapse with any other margins.</p>
+      <p>An element is considered absolutely positioned if it’s position property value is <b>absolute</b> or <b>fixed</b>.</p>
+    </div>
+    <div id="div3"></div>
+  </body>
+</html>
